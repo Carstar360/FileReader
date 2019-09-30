@@ -21,6 +21,12 @@ int main()
   if(fileStream.is_open())
   {
     cout<<fileName<<" opened.\nFILE CONTENTS:\n";
+  while(fileStream.is_open())
+  {
+  getline(fileStream, line);
+  cout<<line<<endl;
+  fileStream.close();
+  }
   }
   else
   {
@@ -29,24 +35,15 @@ int main()
 
 
     //STEP 3: repeat the following until the end-of-file (eof) has been reached...
-    if (fileStream.eof())
-    {
-        cout<<"[EoF reached]\n";
-    }
-    else
-    {
-        cout<<"[EoF reading]\n";
-    }
-
     
     // 3A: read a line from fileStream into the variable line
-    getline(fileStream, line);
+        getline(fileStream, line);
 
     // 3B: display the line, followed by an endline
-    cout<<line<<endl;
+        cout<<line<<endl;
   
     //STEP 4: close the fileStream
-    fileStream.close();
+         fileStream.close();
   
  
 
