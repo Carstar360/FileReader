@@ -21,12 +21,14 @@ int main()
   if(fileStream.is_open())
   {
     cout<<fileName<<" opened.\nFILE CONTENTS:\n";
-  while(fileStream.is_open())
-  {
-  getline(fileStream, line);
-  cout<<line<<endl;
-  fileStream.close();
-  }
+  
+  while(!fileStream.eof())
+    {
+    getline(fileStream, line);
+    cout<<line<<endl;
+    
+    }
+    fileStream.close();
   }
   else
   {
