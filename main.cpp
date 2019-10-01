@@ -39,13 +39,13 @@ int main()
     //STEP 3: repeat the following until the end-of-file (eof) has been reached...
     
     // 3A: read a line from fileStream into the variable line
-        getline(fileStream, line);
+      
 
     // 3B: display the line, followed by an endline
-        cout<<line<<endl;
+      
   
     //STEP 4: close the fileStream
-         fileStream.close();
+         
   
  
 
