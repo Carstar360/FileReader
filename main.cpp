@@ -9,6 +9,11 @@ int main()
   string fileName; //to get the name of the file to open
   string line; //to store a single line of a text file
   fstream fileStream; //to open a file for reading
+  int lineAmount = ' ';
+  int characters = ' ';
+  characters = line.length();
+  int counter = 0;
+  
 
   cout<<"What file do you want to open? ";
   getline(cin, fileName);
@@ -24,9 +29,17 @@ int main()
   
   while(!fileStream.eof())
     {
-    getline(fileStream, line);
-    cout<<line<<endl;
-    
+       getline(fileStream, line);
+       line.length();
+       lineAmount++;
+
+  if (!line.empty())
+       {
+            counter = counter + 1;
+            characters = line.length() + characters;
+            cout<<line<<endl;
+       }
+       
     }
     fileStream.close();
   }
@@ -34,6 +47,10 @@ int main()
   {
     cout<<fileName<<" could not be opened.\n";
   }
+            cout<<"METADATA"<<endl;
+            cout<<"File: "<<fileName<<endl;
+            cout<<"Lines: "<<counter<<endl;
+            cout<<"Characters: "<<characters<<endl;
 
 
     //STEP 3: repeat the following until the end-of-file (eof) has been reached...
