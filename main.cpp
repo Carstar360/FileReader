@@ -60,8 +60,10 @@ int main()
 
                 cout<<"Analyze another file (y/n)?"<<endl;
                 cin>>answer;
+                cin.ignore();
         }
         while(answer == 'y');
+        
 
         //STEP 3: repeat the following until the end-of-file (eof) has been reached...
 
