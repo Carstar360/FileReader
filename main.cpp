@@ -58,15 +58,14 @@ int main()
                 cout<<"Lines: "<<counter<<endl;
                 cout<<"Characters: "<<characters<<endl;
 
-                cout<<"Analyze another file (y/n)?"<<endl;
+                cout<<"Analyze another file (y/n)? ";
                 cin>>answer;
                 cin.ignore();
         }
         while(answer == 'y');
         
 
-        //STEP 3: repeat the following until the end-of-file (eof) has been reached...
-
+        //STEP 3: repeat the following until the end-of-file (eof) has been reached..
         // 3A: read a line from fileStream into the variable line
 
 
