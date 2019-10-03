@@ -34,7 +34,7 @@ int main()
                         {
                                 getline(fileStream, line);
                                 line.length();
-                                lineAmount++;
+                                
 
                                 if (!line.empty())
                                 {
