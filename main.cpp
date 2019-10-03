@@ -28,13 +28,14 @@ int main()
                 if(fileStream.is_open())
                 {
                         cout<<fileName<<" opened.\nFILE CONTENTS:\n";
-
+                     
 
                         while(!fileStream.eof())
                         {
                                 getline(fileStream, line);
                                 line.length();
-                                
+                                counter = 0;
+                                characters = 0;
 
                                 if (!line.empty())
                                 {
@@ -63,10 +64,8 @@ int main()
                 cin.ignore();
         }
         while(answer == 'y');
-        {
-        counter == 0;
-        characters == 0;
-        }
+        
+        
         //STEP 3: repeat the following until the end-of-file (eof) has been reached..
         // 3A: read a line from fileStream into the variable line
 
