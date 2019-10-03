@@ -13,8 +13,10 @@ int main()
   int characters = ' ';
   characters = line.length();
   int counter = 0;
+  char answer = ' ';
   
-
+  do
+  {
   cout<<"What file do you want to open? ";
   getline(cin, fileName);
   
@@ -26,6 +28,7 @@ int main()
   if(fileStream.is_open())
   {
     cout<<fileName<<" opened.\nFILE CONTENTS:\n";
+  
   
   while(!fileStream.eof())
     {
@@ -47,12 +50,19 @@ int main()
   {
     cout<<fileName<<" could not be opened.\n";
   }
+  
+   
+  
             cout<<"METADATA"<<endl;
             cout<<"File: "<<fileName<<endl;
             cout<<"Lines: "<<counter<<endl;
             cout<<"Characters: "<<characters<<endl;
-
-
+ 
+  cout<<"Analyze another file (y/n)?"<<endl;
+  cin>>answer;
+}
+  while(answer == 'y');
+ 
     //STEP 3: repeat the following until the end-of-file (eof) has been reached...
     
     // 3A: read a line from fileStream into the variable line
