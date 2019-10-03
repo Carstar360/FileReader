@@ -63,8 +63,10 @@ int main()
                 cin.ignore();
         }
         while(answer == 'y');
-        
-
+        {
+        counter == 0;
+        characters == 0;
+        }
         //STEP 3: repeat the following until the end-of-file (eof) has been reached..
         // 3A: read a line from fileStream into the variable line
 
