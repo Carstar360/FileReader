@@ -34,8 +34,7 @@ int main()
                         {
                                 getline(fileStream, line);
                                 line.length();
-                                counter = 0;
-                                characters = 0;
+                                
 
                                 if (!line.empty())
                                 {
@@ -58,12 +57,18 @@ int main()
                 cout<<"File: "<<fileName<<endl;
                 cout<<"Lines: "<<counter<<endl;
                 cout<<"Characters: "<<characters<<endl;
-
+                counter = 0;
+                characters = 0;
                 cout<<"Analyze another file (y/n)? ";
                 cin>>answer;
                 cin.ignore();
+                
         }
         while(answer == 'y');
+        {
+        return counter;
+        return characters;
+        }
         
         
         //STEP 3: repeat the following until the end-of-file (eof) has been reached..
